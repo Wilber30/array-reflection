@@ -1,2 +1,8 @@
 
-// Imports 
+// Utilities Imports
+@import 'utilities/variables',
+        'utilities/mixins',
+        'utilities/media';
+
+// Base Imports
+@import 'base/base';
