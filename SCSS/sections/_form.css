@@ -23,6 +23,7 @@
 .heading_wrapper {
   display: flex;
   justify-content: center;
+  margin-bottom: 25px;
 }
 
 .main_heading {
@@ -32,6 +33,14 @@
 .form_wrapper {
   display: flex;
   justify-content: center;
+  padding: 20px 15px 20px 15px;
+  background-color: lightgrey;
+}
+
+#email {
+  padding: 10px;
+  width: 300px;
+  border: 1px solid lightgrey;
 }
 
 /*# sourceMappingURL=_form.css.map */
