@@ -20,8 +20,17 @@
   background-color: lightcoral;
 }
 
+.inner {
+  padding: 20px 0px 20px 0px;
+}
+
 .main_heading {
   text-align: center;
+}
+
+#imageToDisplay {
+  border: 4px solid black;
+  transform: rotate(2deg);
 }
 
 .imageDetails {
