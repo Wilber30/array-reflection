@@ -25,5 +25,3 @@ form.addEventListener('submit', (e) => {
 function isEmail(i) {
   return /^([a-z\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/.test(i);
 }
-
- 

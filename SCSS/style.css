@@ -93,6 +93,11 @@ body {
   background-color: lightsteelblue;
 }
 
+#img-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 #imageToDisplay {
   width: 550px;
   height: 350px;

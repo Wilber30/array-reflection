@@ -59,7 +59,13 @@
   }
 }
 
+#img-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 #imageToDisplay {
-  width: 550px;
-  height: 350px;
+  // width: 550px;
+  // height: 350px;
+  max-height: 500px;
 }
