@@ -44,7 +44,6 @@ getImageBtn.addEventListener('click', (jsonData) => {
 })
 
 // Email submit
-
 const emailSubmit = document.getElementById("submit_btn");
 const emailImages = document.getElementById("emailImages")
 
@@ -61,10 +60,12 @@ emailSubmit.addEventListener('click', (jsonData) => {
       creator.setAttribute("href", jsonData.user.portfolio_url);
 
       let img = document.createElement("img");
+      img.style.borderRadius = "50%";
+      img.style.margin = "10px 15px 10px 15px";
+      img.style.height = "200px";
       emailImages.appendChild(img);
-      img.src = jsonData.urls.regular;
+      img.src = jsonData.urls.thumb;
     })
-
     .catch(function (error) {
       console.log("Error: " + error);
     });
