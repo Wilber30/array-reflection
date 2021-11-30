@@ -16,18 +16,31 @@
     margin: auto;
   }
 }
-.email_inner {
-  padding: 50px 0px 50px 0px;
-}
-
-.heading_wrapper {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 25px;
+#mid_section {
+  background-color: lightcoral;
 }
 
 .main_heading {
   text-align: center;
+}
+
+.imageDetails {
+  text-align: center;
+}
+
+.btn_wrapper {
+  text-align: center;
+}
+
+#generate_btn {
+  font-family: "Ubuntu";
+  padding: 10px 15px 10px 15px;
+  border-radius: 4px;
+  border: 1px solid lightgrey;
+  margin-bottom: 15px;
+}
+#generate_btn:hover {
+  cursor: pointer;
 }
 
 .form_wrapper {
@@ -58,16 +71,15 @@
   border: 1px solid lightblue;
 }
 
-.submit_btn {
-  display: block;
-  margin-top: 16px;
-  padding: 4px 16px 4px 16px;
-  font-family: Ubuntu;
+#submit_btn {
+  font-family: "Ubuntu";
+  padding: 10px 15px 10px 15px;
+  border-radius: 4px;
+  border: 1px solid lightgrey;
+  margin-bottom: 15px;
 }
-.submit_btn:hover {
-  border: 2px solid lightseagreen;
+#submit_btn:hover {
   cursor: pointer;
-  background-color: lightsteelblue;
 }
 
 #img-wrapper {

@@ -5,18 +5,27 @@
         '../utilities/mixins',
         '../utilities/media';
 
-.email_inner {
-  padding: 50px 0px 50px 0px;
-}
-
-.heading_wrapper {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 25px;
+#mid_section {
+  background-color: lightcoral;
 }
 
 .main_heading {
   text-align: center;
+}
+
+.imageDetails {
+  text-align: center;
+}
+
+.btn_wrapper {
+  text-align: center;
+}
+
+#generate_btn {
+  @include btn_style;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .form_wrapper {
@@ -47,15 +56,10 @@
   }
 }
 
-.submit_btn {
-  display: block;
-  margin-top: 16px;
-  padding: 4px 16px 4px 16px;
-  font-family: Ubuntu;
+#submit_btn {
+  @include btn_style;
   &:hover {
-    border: 2px solid lightseagreen;
     cursor: pointer;
-    background-color: lightsteelblue;
   }
 }
 
@@ -65,8 +69,6 @@
 }
 
 #imageToDisplay {
-  // width: 550px;
-  // height: 350px;
   max-height: 500px;
 }
 

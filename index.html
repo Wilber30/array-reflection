@@ -12,41 +12,38 @@
   <main>
 
     <!-- form section -->
-    <div id="email_section">
+    <div id="mid_section">
 
+      <div class="container">
+        <h1 class="main_heading">Photo Generator</h1>
 
+        <div id="img-wrapper">
+          <a id=imageLink href="#">
+            <img id="imageToDisplay" />
+          </a>
+        </div>
 
-          <div class="container">
-          <h1 class="main_heading">Photo Generator</h1>
+        <p class="imageDetails">Photo by <a id="creator" href="#">NAME</a> on
+          <a href="https://www.unsplash.com">Unsplash</a>!
+        </p>
 
-          <div id="img-wrapper">
-            <a id=imageLink href="#"> 
-              <img id="imageToDisplay" />
-            </a>
-          </div>
-
-           <p class="imageDetails">Photo by <a id="creator" href="#">NAME</a> on
-             <a href="https://www.unsplash.com">Unsplash</a>!</p>
+        <div class="btn_wrapper">
           <button id="generate_btn" type="submit" name="generate">Generate</button>
+        </div>
 
-        </div> <!-- container -->
+      </div> <!-- container -->
 
-            <div class="form_wrapper">
-              <form id="form" action="/" method="get">
-                <div id="error"></div>
-                <input id="email" name="email" placeholder="Email:">
-                <button id="submit_btn" type="submit" name="submit">Submit</button>
-              </form>
-            </div>
+      <div class="form_wrapper">
+        <form id="form" action="/" method="get">
+          <div id="error"></div>
+          <input id="email" name="email" placeholder="Email:">
+          <button id="submit_btn" type="submit" name="submit">Submit</button>
+        </form>
+      </div>
 
-            <div id="emailImages">
+      <div id="emailImages"></div>
 
-            </div>
-
-
-
-
-      </div> <!-- section end -->
+    </div> <!-- section end -->
   </main>
   <script src="JS/main.js"></script>
   <script src="JS/img_random.js"></script>
