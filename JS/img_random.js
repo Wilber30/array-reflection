@@ -63,6 +63,7 @@ emailSubmit.addEventListener('click', (jsonData) => {
       img.style.borderRadius = "50%";
       img.style.margin = "10px 15px 10px 15px";
       img.style.height = "200px";
+      img.style.width = "140px";
       emailImages.appendChild(img);
       img.src = jsonData.urls.thumb;
     })
