@@ -12,6 +12,7 @@ let para = document.getElementById("para");
 
 const emailSubmit = document.getElementById("submit_btn");
 const emailImages = document.getElementById("emailImages");
+const uList = document.getElementById("img_list");
 
 // form
 form.addEventListener('submit', (e) => {
@@ -22,13 +23,25 @@ form.addEventListener('submit', (e) => {
   } else if (!isEmail(email.value)) {
     messages.push('Invalid email address')
   }
-  // If  message length  >  0, prevent submit & display messages in error div
-if (messages.length > 0) {
-  e.preventDefault()
-  error.innerText = messages.join(', ')
-} else if (isEmail(email.value)) {
-  e.preventDefault();
-  thumb();
+
+  // Prevent submit & display messages in error div, or accept and store cookie
+  if (messages.length > 0) {
+    e.preventDefault()
+    error.innerText = messages.join(', ')
+    } else if (isEmail(email.value)) {
+    console.log(email.value);
+  }
+
+  // Email already exists
+  if (localStorage.getItem(email.value) !== null) {
+    e.preventDefault();
+    imgAdd();
+  }
+  // Email does not exist
+  else {
+    e.preventDefault();
+    thumb();
+    localStorage.setItem(email.value, email.value);
   }
 })
 
@@ -71,13 +84,16 @@ function thumb() {
       return response.json();
     })
     .then(function(jsonData) {
-      let item = document.createElement("li")
-      item.style.listStyle = "none";
-      emailImages.appendChild(item);
+      let items = document.createElement("div")
+      items.style.display = "flex";
+      items.classList.add("logitem");
+      emailImages.appendChild(items);
 
       let p = document.createElement("p");
-      item.appendChild(p);
+      p.classList.add("email");
       p.innerText = email.value;
+      items.appendChild(p);
+
 
       let img = document.createElement("img");
       img.style.borderRadius = "50%";
@@ -85,10 +101,33 @@ function thumb() {
       img.style.height = "200px";
       img.style.width = "140px";
 
-      item.appendChild(img);
+      items.appendChild(img);
       img.src = jsonData.urls.thumb;
     })
 
+    .catch(function(error) {
+      console.log("Error: " + error);
+    });
+}
+
+//fetch request
+function imgAdd() {
+  fetch(requestURL)
+    .then(function(response) {
+      return response.json();
+    })
+    // Sets image and provides link in href value
+    .then(function(jsonData) {
+      let img = document.createElement("img");
+      img.style.borderRadius = "50%";
+      img.style.margin = "10px 15px 10px 15px";
+      img.style.height = "200px";
+      img.style.width = "140px";
+
+      let log = document.querySelector(".logitem");
+      log.appendChild(img);
+      img.src = jsonData.urls.thumb;
+    })
     .catch(function(error) {
       console.log("Error: " + error);
     });
