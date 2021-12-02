@@ -58,8 +58,6 @@ getImageBtn.addEventListener('click', (jsonData) => {
   imgGet();
 })
 
-
-
 //fetch request
 function imgGet() {
   fetch(requestURL)
