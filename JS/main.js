@@ -14,7 +14,10 @@ const emailSubmit = document.getElementById("submit_btn");
 const emailImages = document.getElementById("emailImages");
 const uList = document.getElementById("img_list");
 
-// form
+window.onload = imgGet();
+window.onload = localStorage.clear();
+
+// FORM VALIDATION & LOCAL STORAGE CHECK
 form.addEventListener('submit', (e) => {
   let messages = []
 // If user has entered email/ else if, then compares value to regex format
@@ -28,8 +31,8 @@ form.addEventListener('submit', (e) => {
   if (messages.length > 0) {
     e.preventDefault()
     error.innerText = messages.join(', ')
+    return;
     } else if (isEmail(email.value)) {
-    console.log(email.value);
   }
 
   // Email already exists
@@ -40,7 +43,7 @@ form.addEventListener('submit', (e) => {
   // Email does not exist
   else {
     e.preventDefault();
-    thumb();
+    addDiv();
     localStorage.setItem(email.value, email.value);
   }
 })
@@ -55,7 +58,7 @@ getImageBtn.addEventListener('click', (jsonData) => {
   imgGet();
 })
 
-window.onload = imgGet();
+
 
 //fetch request
 function imgGet() {
@@ -78,7 +81,7 @@ function imgGet() {
 }
 
 //The same as the above fetch request, but added thumnail img
-function thumb() {
+function  addDiv() {
   fetch(requestURL)
     .then(function(response) {
       return response.json();
@@ -93,7 +96,6 @@ function thumb() {
       p.classList.add("email");
       p.innerText = email.value;
       items.appendChild(p);
-
 
       let img = document.createElement("img");
       img.style.borderRadius = "50%";
