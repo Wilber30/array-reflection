@@ -1,7 +1,7 @@
 // Email Validation
 const form = document.getElementById("form");
 const email = document.getElementById("email");
-const error = document.getElementById("error");
+const error = document.getElementById("error"); 
 
 let requestURL = `https://api.unsplash.com/photos/random/?client_id=y-_yh_bYyoUgOO9Eq6u4Ov4smojskd0HzkgQL1zg2Ys`;
 const getImageBtn = document.getElementById("generate_btn");
@@ -38,12 +38,12 @@ form.addEventListener('submit', (e) => {
   // Email already exists
   if (localStorage.getItem(email.value) !== null) {
     e.preventDefault();
-    imgAdd();
+    addImgToRow();
   }
   // Email does not exist
   else {
     e.preventDefault();
-    addDiv();
+    addEmailRow();
     localStorage.setItem(email.value, email.value);
   }
 })
@@ -79,7 +79,7 @@ function imgGet() {
 }
 
 //The same as the above fetch request, but added thumnail img
-function  addDiv() {
+function addEmailRow() {
   fetch(requestURL)
     .then(function(response) {
       return response.json();
@@ -88,6 +88,7 @@ function  addDiv() {
       let items = document.createElement("div")
       items.style.display = "flex";
       items.classList.add("logitem");
+      items.id = email.value;
       emailImages.appendChild(items);
 
       let p = document.createElement("p");
@@ -111,7 +112,7 @@ function  addDiv() {
 }
 
 //fetch request
-function imgAdd() {
+function addImgToRow() {
   fetch(requestURL)
     .then(function(response) {
       return response.json();
@@ -124,7 +125,7 @@ function imgAdd() {
       img.style.height = "200px";
       img.style.width = "140px";
 
-      let log = document.querySelector(".logitem");
+      let log = document.getElementById(email.value);
       log.appendChild(img);
       img.src = jsonData.urls.thumb;
     })
