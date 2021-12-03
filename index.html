@@ -6,22 +6,28 @@
   <meta name="viewport" content="width=device-width,
   initial-scale=1">
   <title>Array Reflection</title>
-   <link rel="stylesheet" href="CSS/all.min.css">
-   <link rel="stylesheet" type="text/css" href="SCSS/style.css">
+  <link rel="stylesheet" href="CSS/all.min.css">
+  <link rel="stylesheet" type="text/css" href="SCSS/style.css">
 
 </head>
 
 <body>
-  <main>
-    <header>
+
+  <header>
+    <div id="header_wrapper">
       <div class="container">
-
-        <h3 class="logo">Photo Gen</h3>
-
+        <h3 class="logo"><a href="../index.html">Photo Gen</a></h3>
+        <div class="about_task">
+          <p>The aim of this task was to assign an email address to a generated image.<br>
+            <i>Please <a href="#mid_section">scroll down</a> to assign an email address to an image.</i>
+          </p>
+        </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <!-- form section -->
+  <main>
+
     <div id="top_section">
       <div class="inner">
 
@@ -42,50 +48,49 @@
             <button id="generate_btn" name="generate">Generate</button>
           </div>
 
-          <div class="scroll-down">
-             <a href="#mid_section">
-               <p id="scroll">Scroll Down<br>
-                 <i class="fas fa-chevron-down"></i>
-               </p>
-             </a>
-           </div>
+          <p id="scroll_down"><a href="#mid_section">
+              Scroll Down<br> <i class="fas fa-chevron-down"></i> </a>
+          </p>
 
         </div> <!-- container -->
       </div> <!-- inner -->
     </div> <!-- top section end -->
 
     <div id="mid_section">
-    <div class="form_wrapper">
-      <form id="form" action="/" method="get">
-        <div id="error"></div>
-        <input id="email" name="email" placeholder="Email:">
-        <button id="submit_btn" type="submit">Submit</button>
-      </form>
-    </div>
 
-    <div class="container">
+      <!-- form -->
+      <div class="form_wrapper">
 
-      <div id="box">
-        <h1 class="assigned_heading">Assigned Images</h1>
-        <div id="emailImages"></div>
+        <form id="form" action="/" method="get">
+          <div id="error"></div>
+          <input id="email" name="email" placeholder="Email:">
+          <button id="submit_btn" type="submit">Submit</button>
+        </form>
+
       </div>
 
-    </div>
+      <!-- image box start -->
+      <div class="container">
 
-    <div class="scroll-down">
-       <a href="#mid_section">
-         <p id="scroll">Scroll Down<br>
-           <i class="fas fa-chevron-down"></i>
-         </p>
-       </a>
-     </div>
+        <div id="box">
+          <h1 class="assigned_heading">Assigned Images</h1>
+          <div id="emailImages"></div>
+        </div>
 
-  <footer>
-    <div class="end_message">
-      <p>Thank you for stopping by</p>
-    </div>
-  </footer>
-  </div> <!-- mid section end -->
+        <p id="to_top"><a href="#header_wrapper">
+            <i class="fas fa-chevron-up"></i><br> Scroll Up </a>
+        </p>
+
+      </div>
+
+      <footer>
+        <div class="end_message">
+          <p>Thank you for stopping by</p>
+        </div>
+      </footer>
+
+    </div> <!-- mid section end -->
+
   </main>
 
   <script src="JS/main.js"></script>

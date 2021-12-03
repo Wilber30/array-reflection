@@ -6,7 +6,6 @@
         '../utilities/media';
 
 #top_section {
-  height: 100vh;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -29,7 +28,7 @@
 
 .imageDetails {
   text-align: center;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .btn_wrapper {
@@ -39,17 +38,21 @@
 #generate_btn {
   @include btn_style;
   font-size: x-large;
+  margin-bottom: 35px;
   &:hover {
-    cursor: pointer;
+    @include btn_hover;
   }
 }
 
-.scroll-down {
+#scroll_down {
+  margin-top: 40px;
   text-align: center;
+  font-size: 18px;
 }
 
-#scroll {
-  margin-top: 40px;
+#scroll_down a:hover {
+    color: gainsboro;
+    transition-duration: 0.2s;
 }
 
 #mid_section {
@@ -79,19 +82,21 @@
     font-size: 20px;
   &:active {
     background-color: lightcyan;
+    transition-duration: 0.6s;
   }
   &:focus {
     outline: none;
     background-color: lightcyan;
+    transition-duration: 0.6s;
   }
 }
 
 #submit_btn {
   @include btn_style;
-  margin-left: 20px;
+  margin: 0px 0px 15px 20px;
   font-size: x-large;
   &:hover {
-    cursor: pointer;
+    @include btn_hover;
   }
 }
 
@@ -119,6 +124,17 @@
   border-radius: 20px;
   border-bottom: 4px solid darksalmon;
   background-color: ghostwhite;
+}
+
+#to_top {
+  text-align: center;
+  font-size: 18px;
+}
+
+#to_top a:hover {
+    color: darksalmon;
+    transition-duration: 0.2s;
+
 }
 
 footer {

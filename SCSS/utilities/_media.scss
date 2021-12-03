@@ -18,3 +18,27 @@
     margin: auto;
   }
 }
+
+@media (min-width: 992px) {
+  .about_task {
+    display: block !important;
+  }
+}
+
+@media (max-width: 576px) {
+  #email {
+    width: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  #form {
+    display: flex;
+  }
+}
+
+@media (min-width: 576px) {
+  #top_section {
+    height: 100vh;
+  }
+}
