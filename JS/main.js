@@ -1,7 +1,7 @@
 // Email Validation
 const form = document.getElementById("form");
 const email = document.getElementById("email");
-const error = document.getElementById("error"); 
+const error = document.getElementById("error");
 
 let requestURL = `https://api.unsplash.com/photos/random/?client_id=y-_yh_bYyoUgOO9Eq6u4Ov4smojskd0HzkgQL1zg2Ys`;
 const getImageBtn = document.getElementById("generate_btn");
@@ -85,24 +85,29 @@ function addEmailRow() {
       return response.json();
     })
     .then(function(jsonData) {
-      let items = document.createElement("div")
-      items.style.display = "flex";
-      items.classList.add("logitem");
-      items.id = email.value;
-      emailImages.appendChild(items);
-
       let p = document.createElement("p");
       p.classList.add("email");
       p.innerText = email.value;
-      items.appendChild(p);
+      p.style.paddingLeft = "30px";
+      emailImages.appendChild(p);
+
+      let row = document.createElement("div")
+      row.classList.add("logitem");
+      row.id = email.value;
+      row.style.display = "flex";
+      row.style.alignItems = "center";
+      row.style.overflowX = "scroll";
+      row.style.borderBottom = "4px solid darksalmon";
+      emailImages.appendChild(row);
 
       let img = document.createElement("img");
       img.style.borderRadius = "50%";
       img.style.margin = "10px 15px 10px 15px";
+      img.style.paddingLeft = "10px";
       img.style.height = "200px";
       img.style.width = "140px";
 
-      items.appendChild(img);
+      row.appendChild(img);
       img.src = jsonData.urls.thumb;
     })
 
