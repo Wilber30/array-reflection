@@ -46,8 +46,9 @@ a {
     margin: auto;
   }
 }
-#mid_section {
+#top_section {
   background-color: lightcoral;
+  height: 100vh;
 }
 
 .inner {
@@ -86,7 +87,6 @@ a {
   display: flex;
   justify-content: center;
   padding: 20px 15px 20px 15px;
-  background-color: lightgrey;
 }
 
 #error {
@@ -97,17 +97,20 @@ a {
 }
 
 #email {
+  width: 400px;
+  height: 40px;
   padding: 10px;
-  width: 300px;
-  border: 1px solid lightgrey;
+  border: 4px solid lightgrey;
+  border-radius: 20px;
   font-family: Ubuntu;
+  font-size: 20px;
 }
 #email:active {
-  border: 1px solid lightblue;
+  background-color: lightcyan;
 }
 #email:focus {
   outline: none;
-  border: 1px solid lightblue;
+  background-color: lightcyan;
 }
 
 #submit_btn {
