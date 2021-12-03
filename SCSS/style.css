@@ -47,8 +47,12 @@ a {
   }
 }
 #top_section {
-  background-color: lightcoral;
   height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightcoral;
 }
 
 .inner {
@@ -66,6 +70,7 @@ a {
 
 .imageDetails {
   text-align: center;
+  font-size: 13px;
 }
 
 .btn_wrapper {
@@ -77,10 +82,24 @@ a {
   padding: 10px 15px 10px 15px;
   border-radius: 4px;
   border: 1px solid lightgrey;
+  box-shadow: 0.9px 0.6px;
   margin-bottom: 15px;
+  font-size: x-large;
 }
 #generate_btn:hover {
   cursor: pointer;
+}
+
+.scroll-down {
+  text-align: center;
+}
+
+#scroll {
+  margin-top: 40px;
+}
+
+#mid_section {
+  height: 100vh;
 }
 
 .form_wrapper {
@@ -118,7 +137,10 @@ a {
   padding: 10px 15px 10px 15px;
   border-radius: 4px;
   border: 1px solid lightgrey;
+  box-shadow: 0.9px 0.6px;
   margin-bottom: 15px;
+  margin-left: 20px;
+  font-size: x-large;
 }
 #submit_btn:hover {
   cursor: pointer;
@@ -135,7 +157,7 @@ a {
 
 #box {
   min-height: 700px;
-  margin-top: 30px;
+  margin-top: 30px 0px 50px 0px;
   border: 3px solid darksalmon;
   border-radius: 20px;
   background-color: floralwhite;
@@ -148,6 +170,21 @@ a {
   border-radius: 20px;
   border-bottom: 4px solid darksalmon;
   background-color: ghostwhite;
+}
+
+footer {
+  background-color: #333645;
+}
+
+.end_message {
+  height: 45px;
+  padding: 30px;
+  text-align: center;
+  color: white;
+}
+
+.end_message p {
+  margin-top: 10px;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {

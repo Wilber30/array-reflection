@@ -6,8 +6,12 @@
         '../utilities/media';
 
 #top_section {
-  background-color: lightcoral;
   height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightcoral;
 }
 
 .inner {
@@ -25,6 +29,7 @@
 
 .imageDetails {
   text-align: center;
+  font-size: 13px;
 }
 
 .btn_wrapper {
@@ -33,9 +38,22 @@
 
 #generate_btn {
   @include btn_style;
+  font-size: x-large;
   &:hover {
     cursor: pointer;
   }
+}
+
+.scroll-down {
+  text-align: center;
+}
+
+#scroll {
+  margin-top: 40px;
+}
+
+#mid_section {
+  height: 100vh;
 }
 
 .form_wrapper {
@@ -70,6 +88,8 @@
 
 #submit_btn {
   @include btn_style;
+  margin-left: 20px;
+  font-size: x-large;
   &:hover {
     cursor: pointer;
   }
@@ -86,14 +106,10 @@
 
 #box {
   min-height: 700px;
-  margin-top: 30px;
+  margin-top: 30px 0px 50px 0px;
   border: 3px solid darksalmon;
   border-radius: 20px;
   background-color: floralwhite;
-}
-
-#emailImages {
-
 }
 
 .assigned_heading {
@@ -103,4 +119,19 @@
   border-radius: 20px;
   border-bottom: 4px solid darksalmon;
   background-color: ghostwhite;
+}
+
+footer {
+  background-color: #333645;
+}
+
+.end_message {
+  height: 45px;
+  padding: 30px;
+  text-align: center;
+  color: white;
+}
+
+.end_message p {
+  margin-top: 10px;
 }
