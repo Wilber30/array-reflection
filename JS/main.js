@@ -89,6 +89,7 @@ function addEmailRow() {
       p.classList.add("email");
       p.innerText = email.value;
       p.style.paddingLeft = "30px";
+      p.style.fontSize = "20px";
       emailImages.appendChild(p);
 
       let row = document.createElement("div")
