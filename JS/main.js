@@ -17,7 +17,7 @@ const uList = document.getElementById("img_list");
 window.onload = imgGet();
 window.onload = localStorage.clear();
 
-// FORM VALIDATION & LOCAL STORAGE CHECK
+// Form Validation & localStorage check
 form.addEventListener('submit', (e) => {
   let messages = []
 // If user has entered email/ else if, then compares value to regex format
