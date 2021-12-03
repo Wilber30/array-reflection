@@ -1,10 +1,8 @@
 // Forms
-
 // Utilities Imports
-@import '../utilities/variables',
-        '../utilities/mixins',
-        '../utilities/media';
+@import '../utilities/variables', '../utilities/mixins', '../utilities/media';
 
+// BANNER SECTION
 #top_section {
   overflow: hidden;
   display: flex;
@@ -14,14 +12,21 @@
 }
 
 .inner {
-  padding: 20px 0px 20px 0px;
+  padding: 20px 0;
 }
 
 .main_heading {
   text-align: center;
 }
 
+#img-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+
 #imageToDisplay {
+  max-height: 500px;
   border: 4px solid black;
   transform: rotate(2deg);
 }
@@ -39,6 +44,7 @@
   @include btn_style;
   font-size: x-large;
   margin-bottom: 35px;
+
   &:hover {
     @include btn_hover;
   }
@@ -51,9 +57,11 @@
 }
 
 #scroll_down a:hover {
-    color: gainsboro;
-    transition-duration: 0.2s;
+  color: gainsboro;
+  transition-duration: 0.2s;
 }
+
+// FORM SECTION
 
 #mid_section {
   height: 100vh;
@@ -62,7 +70,7 @@
 .form_wrapper {
   display: flex;
   justify-content: center;
-  padding: 20px 15px 20px 15px;
+  padding: 20px 15px;
 }
 
 #error {
@@ -73,17 +81,19 @@
 }
 
 #email {
-    width: 400px;
-    height: 40px;
-    padding: 10px;
-    border: 4px solid lightgrey;
-    border-radius: 20px;
-    font-family: Ubuntu;
-    font-size: 20px;
+  width: 400px;
+  height: 40px;
+  padding: 10px;
+  border: 4px solid lightgrey;
+  border-radius: 20px;
+  font-family: Ubuntu;
+  font-size: 20px;
+
   &:active {
     background-color: lightcyan;
     transition-duration: 0.6s;
   }
+
   &:focus {
     outline: none;
     background-color: lightcyan;
@@ -93,25 +103,19 @@
 
 #submit_btn {
   @include btn_style;
-  margin: 0px 0px 15px 20px;
+  margin: 0 0 15px 20px;
   font-size: x-large;
+
   &:hover {
     @include btn_hover;
   }
 }
 
-#img-wrapper {
-  display: flex;
-  justify-content: center;
-}
-
-#imageToDisplay {
-  max-height: 500px;
-}
+// IMAGE INTERFACE
 
 #box {
   min-height: 700px;
-  margin-top: 30px 0px 50px 0px;
+  margin-top: 30px 0 50px 0;
   border: 3px solid darksalmon;
   border-radius: 20px;
   background-color: floralwhite;
@@ -119,7 +123,7 @@
 
 .assigned_heading {
   text-align: center;
-  margin: 0px;
+  margin: 0;
   padding: 20px;
   border-radius: 20px;
   border-bottom: 4px solid darksalmon;
@@ -132,9 +136,8 @@
 }
 
 #to_top a:hover {
-    color: darksalmon;
-    transition-duration: 0.2s;
-
+  color: darksalmon;
+  transition-duration: 0.2s;
 }
 
 footer {
