@@ -70,7 +70,7 @@
 .form_wrapper {
   display: flex;
   justify-content: center;
-  padding: 20px 15px;
+  padding: 15px;
 }
 
 #error {
@@ -109,6 +109,10 @@
   &:hover {
     @include btn_hover;
   }
+}
+
+.direction {
+  line-height: 1.6rem;
 }
 
 // IMAGE INTERFACE

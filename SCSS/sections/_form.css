@@ -106,7 +106,7 @@
 .form_wrapper {
   display: flex;
   justify-content: center;
-  padding: 20px 15px;
+  padding: 15px;
 }
 
 #error {
@@ -149,6 +149,10 @@
   background-color: gainsboro;
   box-shadow: 0.9px 0.6px darksalmon;
   transition-duration: 0.6s;
+}
+
+.direction {
+  line-height: 1.6rem;
 }
 
 #box {
