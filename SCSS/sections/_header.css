@@ -21,6 +21,21 @@
     display: block !important;
   }
 }
+@media (max-width: 576px) {
+  #email {
+    width: 200px;
+  }
+}
+@media (max-width: 576px) {
+  #form {
+    display: flex;
+  }
+}
+@media (min-width: 576px) {
+  #top_section {
+    height: 100vh;
+  }
+}
 .logo {
   margin: 20px;
   padding-left: 35px;
@@ -38,7 +53,7 @@
 .about_task {
   display: none;
   position: absolute;
-  top: 0;
+  top: -25%;
   right: 10%;
   line-height: 1.4rem;
 }
