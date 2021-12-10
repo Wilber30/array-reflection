@@ -33,17 +33,20 @@ form.addEventListener('submit', (e) => {
     error.innerText = messages.join(', ')
     return;
     } else if (isEmail(email.value)) {
+      error.innerText = "";
   }
 
   // Email already exists
   if (localStorage.getItem(email.value) !== null) {
     e.preventDefault();
     addImgToRow();
+    imgGet();
   }
   // Email does not exist
   else {
     e.preventDefault();
     addEmailRow();
+    imgGet();
     localStorage.setItem(email.value, email.value);
   }
 })
@@ -78,13 +81,7 @@ function imgGet() {
     });
 }
 
-//The same as the above fetch request, but added thumnail img
 function addEmailRow() {
-  fetch(requestURL)
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(jsonData) {
       let p = document.createElement("p");
       p.classList.add("email");
       p.innerText = email.value;
@@ -109,22 +106,11 @@ function addEmailRow() {
       img.style.width = "120px";
 
       row.appendChild(img);
-      img.src = jsonData.urls.thumb;
-    })
-
-    .catch(function(error) {
-      console.log("Error: " + error);
-    });
-}
+      img.src = imgToDisplay.src;
+    }
 
 //fetch request
 function addImgToRow() {
-  fetch(requestURL)
-    .then(function(response) {
-      return response.json();
-    })
-    // Sets image and provides link in href value
-    .then(function(jsonData) {
       let img = document.createElement("img");
       img.style.borderRadius = "50%";
       img.style.margin = "10px 15px 10px 15px";
@@ -133,9 +119,5 @@ function addImgToRow() {
 
       let log = document.getElementById(email.value);
       log.appendChild(img);
-      img.src = jsonData.urls.thumb;
-    })
-    .catch(function(error) {
-      console.log("Error: " + error);
-    });
-}
+      img.src = imgToDisplay.src;
+    }
