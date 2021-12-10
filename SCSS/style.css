@@ -301,7 +301,7 @@ footer {
 .about_task {
   display: none;
   position: absolute;
-  top: -25%;
+  top: -40%;
   right: 10%;
   line-height: 1.4rem;
 }
