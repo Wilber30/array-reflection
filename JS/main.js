@@ -105,8 +105,8 @@ function addEmailRow() {
       img.style.borderRadius = "50%";
       img.style.margin = "10px 15px 10px 15px";
       img.style.paddingLeft = "10px";
-      img.style.height = "200px";
-      img.style.width = "140px";
+      img.style.height = "120px";
+      img.style.width = "120px";
 
       row.appendChild(img);
       img.src = jsonData.urls.thumb;
@@ -128,8 +128,8 @@ function addImgToRow() {
       let img = document.createElement("img");
       img.style.borderRadius = "50%";
       img.style.margin = "10px 15px 10px 15px";
-      img.style.height = "200px";
-      img.style.width = "140px";
+      img.style.height = "120px";
+      img.style.width = "120px";
 
       let log = document.getElementById(email.value);
       log.appendChild(img);
