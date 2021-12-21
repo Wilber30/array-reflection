@@ -50,11 +50,13 @@
   position: relative;
 }
 
+.header_contents {
+  display: flex;
+  justify-content: space-between;
+}
+
 .about_task {
   display: none;
-  position: absolute;
-  top: -40%;
-  right: 10%;
   line-height: 1.4rem;
 }
 
