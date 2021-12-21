@@ -104,6 +104,7 @@ function addEmailRow() {
       img.style.paddingLeft = "10px";
       img.style.height = "120px";
       img.style.width = "120px";
+      img.style.objectFit = "cover";
 
       row.appendChild(img);
       img.src = imgToDisplay.src;
