@@ -16,7 +16,7 @@
     margin: auto;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .about_task {
     display: block !important;
   }
@@ -64,7 +64,7 @@
   color: coral !important;
 }
 .scroll_down:hover {
-  color: #501500 !important;
+  color: #ff5a1d !important;
   cursor: pointer;
 }
 

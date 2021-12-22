@@ -73,6 +73,10 @@
   padding: 15px;
 }
 
+#form {
+  text-align: center;
+}
+
 #error {
   display: flex;
   margin-bottom: 10px;
@@ -103,7 +107,7 @@
 
 #submit_btn {
   @include btn_style;
-  margin: 0 0 15px 20px;
+  margin: 10px 0 15px 20px;
   font-size: x-large;
 
   &:hover {

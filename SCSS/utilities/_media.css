@@ -16,7 +16,7 @@
     margin: auto;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .about_task {
     display: block !important;
   }
@@ -27,8 +27,8 @@
   }
 }
 @media (max-width: 576px) {
-  #form {
-    display: flex;
+  .text_break {
+    display: none;
   }
 }
 @media (min-width: 576px) {
