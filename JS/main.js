@@ -117,6 +117,7 @@ function addImgToRow() {
       img.style.margin = "10px 15px 10px 15px";
       img.style.height = "120px";
       img.style.width = "120px";
+      img.style.objectFit = "cover";
 
       let log = document.getElementById(email.value);
       log.appendChild(img);
