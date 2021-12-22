@@ -308,4 +308,12 @@ footer {
   line-height: 1.4rem;
 }
 
+.scroll_down {
+  color: coral !important;
+}
+.scroll_down:hover {
+  color: #ff5a1d !important;
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -60,4 +60,12 @@
   line-height: 1.4rem;
 }
 
+.scroll_down {
+  color: coral !important;
+}
+.scroll_down:hover {
+  color: #501500 !important;
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=_header.css.map */
