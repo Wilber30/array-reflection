@@ -53,7 +53,7 @@ form.addEventListener('submit', (e) => {
 
 // Function tests variable against regex format
 function isEmail(i) {
-  return /^([a-z\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/.test(i);
+  return /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/.test(i);
 }
 
 // Button to Generate Image
