@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "localhost": "php -S localhost:8000",
-    "dev": "npx tailwindcss -i ./src/css/input.css -o ./dist/output.css --watch"
+    "dev": "node-sass SCSS/style.scss CSS/styles.css -w"
   },
   "repository": {
     "type": "git",
