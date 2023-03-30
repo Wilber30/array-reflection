@@ -4,7 +4,8 @@
   "description": "A JavaScript project that assigns an email address to an image loaded from UnSplash API.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "localhost": "php -S localhost:8000",
+    "dev": "npx tailwindcss -i ./src/css/input.css -o ./dist/output.css --watch"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,6 @@
   },
   "homepage": "https://github.com/Wilber30/array-reflection#readme",
   "dependencies": {
-    "fontawesome-free": "^1.0.4",
-    "node-sass": "^8.0.0"
+    "fontawesome-free": "^1.0.4"
   }
 }
