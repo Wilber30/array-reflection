@@ -264,3 +264,6 @@ footer {
   .scroll_down:hover {
     color: #ff5a1d !important;
     cursor: pointer; }
+
+.down-arrow {
+  padding-bottom: 10px; }
