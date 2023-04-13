@@ -25,6 +25,7 @@
   "homepage": "https://github.com/Wilber30/array-reflection#readme",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.4.0",
-    "fontawesome-free": "^1.0.4"
+    "fontawesome-free": "^1.0.4",
+    "node-sass": "^8.0.0"
   }
 }
