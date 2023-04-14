@@ -5,10 +5,19 @@
         '../utilities/mixins',
         '../utilities/media';
 
+#top_wrapper {
+  height: 100vh;
+}
+
+header {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+
 .logo {
-  margin: 20px;
-  padding-left: 35px;
-  font-size: 28px;
+  margin: 8px;
+  font-size: 24px;
   font-family: Pacifico;
   &:hover {
    text-shadow: -1px -1px 0 gold, 1px -1px 0 gold, -1px 1px 0 gold, 1px 1px 0 gold;
@@ -21,12 +30,16 @@
 
 .header_contents {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .about_task {
   display: none;
   line-height: 1.4rem;
+}
+
+.task_text {
+  margin: 8px;
 }
 
 .scroll_down {
