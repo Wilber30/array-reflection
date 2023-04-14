@@ -20,6 +20,9 @@
 }
 
 @media (min-width: 768px) {
+  header {
+    display: block !important;
+  }
   .about_task {
     display: block !important;
   }
@@ -37,8 +40,8 @@
   }
 }
 
-// @media (min-width: 576px) {
-//   #top_section {
-//     height: 100vh;
-//   }
-// }
+@media (min-width: 992px) {
+  #imgToDisplay {
+    height: 45vh;
+  }
+}
