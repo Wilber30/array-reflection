@@ -29,10 +29,6 @@
   .text_break {
     display: none; } }
 
-@media (min-width: 992px) {
-  #imgToDisplay {
-    height: 45vh; } }
-
 html {
   scroll-behavior: smooth; }
 
@@ -71,10 +67,6 @@ a {
 @media (max-width: 576px) {
   .text_break {
     display: none; } }
-
-@media (min-width: 992px) {
-  #imgToDisplay {
-    height: 45vh; } }
 
 #top_section {
   height: 90vh;
@@ -248,10 +240,6 @@ footer {
 @media (max-width: 576px) {
   .text_break {
     display: none; } }
-
-@media (min-width: 992px) {
-  #imgToDisplay {
-    height: 45vh; } }
 
 #top_wrapper {
   height: 100vh; }
