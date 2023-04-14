@@ -12,52 +12,51 @@
 </head>
 
 <body>
-
-  <header> 
-    <div id="header_wrapper">
-      <div class="container">
-        <div class="header_contents">
-          <h3 class="logo"><a href="../index.html">Photo Gen</a></h3>
-          <div class="about_task">
-            <p>The aim of this task was to assign an email address to a generated image.<br>
-              <i>Please <a class="scroll_down" href="#mid_section">scroll down</a> to assign an email address to the image displayed below.</i>
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </header>
-
-  <main>
-
-    <div id="top_section" class="full-bleed-top">
-      <div class="inner">
-
+  <div id="top_wrapper">
+    <header> 
+      <div id="header_wrapper">
         <div class="container">
-          <h1 class="main_heading">Photo Generator</h1>
-
-          <div id="img-wrapper">
-            <a id=imageLink href="#">
-              <img src="#" id="imageToDisplay" alt="fetched image" />
-            </a>
+          <div class="header_contents">
+            <h3 class="logo"><a href="../index.html">Photo Gen</a></h3>
+            <div class="about_task">
+              <p class="task_text">The aim of this task was to assign an email address to a generated image.<br>
+                <i>Please <a class="scroll_down" href="#mid_section">scroll down</a> to assign an email address to the image displayed below.</i>
+              </p>
+            </div>
           </div>
 
-          <p class="imageDetails">Photo by <a id="creator" href="#">NAME</a> on
-            <a href="https://www.unsplash.com">Unsplash</a>!
-          </p>
+        </div>
+      </div>
+    </header>
 
-          <div class="btn_wrapper">
-            <button id="generate_btn" name="generate">Generate an Image</button>
-          </div>
+      <div id="top_section" class="full-bleed-top">
+        <div class="inner">
 
-          <p id="scroll_down"><a href="#mid_section">
-              Scroll Down<br> <i class=" down-arrow fas fa-chevron-down"></i>
-          </p>
+          <div class="container">
+            <h1 class="main_heading">Photo Generator</h1>
 
-        </div> <!-- container -->
-      </div> <!-- inner -->
-    </div> <!-- top section end -->
+            <div id="img-wrapper">
+              <a id=imageLink href="#">
+                <img src="#" id="imageToDisplay" alt="fetched image" />
+              </a>
+            </div>
+
+            <p class="imageDetails">Photo by <a id="creator" href="#">NAME</a> on
+              <a href="https://www.unsplash.com">Unsplash</a>!
+            </p>
+
+            <div class="btn_wrapper">
+              <button id="generate_btn" name="generate">Generate an Image</button>
+            </div>
+
+            <p id="scroll_down"><a href="#mid_section">
+                Scroll Down<br> <i class=" down-arrow fas fa-chevron-down"></i>
+            </p>
+
+          </div> <!-- container -->
+        </div> <!-- inner -->
+      </div> <!-- top section end -->
+    </div>
 
     <div id="mid_section">
 
@@ -96,8 +95,6 @@
       </footer>
 
     </div> <!-- mid section end -->
-
-  </main>
 
   <script src="JS/main.js"></script>
 
